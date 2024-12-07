@@ -54,6 +54,10 @@ body {
   gap: 20px;
 }
 
+.container-logo img {
+  width: 150px;
+}
+
 button {
   background-color: #252a30;
   color: #ffffff;
