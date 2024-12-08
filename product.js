@@ -24,5 +24,12 @@ const menuOptions = [
     vegan: true,
     src: "./assets/monstruoso-vegan.png",
   },
-  { name: "X-Vegan", price: 45, vegan: true, src: "./assets/xvegan.png" },
+  { name: "X-Vegan", 
+    price: 45, 
+    vegan: true, 
+    src: "./assets/xvegan.png" },
+  { name: "Big X-Vegan", 
+    price: 60, 
+    vegan: true, 
+    src: "./assets/big-monstruoso-vegan.jpg" }
 ];
