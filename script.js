@@ -10,7 +10,10 @@ const buttonShowVegan = document.querySelector(".show-vegan");
 
 ////////////////////////////////
 
+let currentProducts = menuOptions;
+
 const showAll = (productsArray) => {
+  currentProducts = productsArray;
   let myLi = "";
   productsArray.forEach((product) => {
     myLi += `
@@ -30,14 +33,21 @@ const showAll = (productsArray) => {
 };
 
 const mapAll = () => {
-  const newPrices = menuOptions.map((product) => ({
-    ...product,
-    price: product.price * 0.9,
-  }));
+  const newPrices = currentProducts.map((product) => {
+    if (!product.discountApplied) {
+      return {
+        ...product,
+        price: product.price * 0.9,
+        discountApplied: true,
+      };
+    }
+    return product;
+  });
   showAll(newPrices);
 };
 
-const totalValue = menuOptions.reduce((acc, curr) => acc + curr.price, 0);
+const totalValue = () =>
+  currentProducts.reduce((acc, curr) => acc + curr.price, 0);
 
 ////////////////////////////////
 
