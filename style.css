@@ -59,6 +59,11 @@ body {
   width: 150px;
 }
 
+.item-price {
+  color: #477a07;
+  font-weight: 700;
+}
+
 button {
   background-color: #252a30;
   color: #ffffff;
